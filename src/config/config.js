@@ -1,10 +1,10 @@
 const config = {
-    secret: '9238fSf9fAKckj332Knaksnf9012ADSN',
+    secret: process.env.JWT_SECRET || '9238fSf9fAKckj332Knaksnf9012ADSN',
     env: process.env.ENV,
-    port: 3000,
+    port: process.env.PORT || 3000,
     db: {
-        dbUrl: 'mongodb://127.0.0.1:27017',
-        dbName: 'diploma',
+        dbUrl: process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017',
+        dbName: process.env.MONGODB_DB || 'diploma',
         dbHost: 'localhost',
         dbPort: 27017,
     },
